@@ -27,7 +27,7 @@ class _DemoStateScreenState extends State<DemoStateScreen> {
             ),
             Text(
               '$counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
             ElevatedButton(
                 onPressed: () => _onClickMeNow(),
