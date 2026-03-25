@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screen/demo_state/demo_stateful_stateless_screen.dart';
 
 import 'screen/demo_bloc/counter_screen.dart';
-import 'screen/demo_state/demo_state_screen.dart';
+import 'screen/demo_state/callback/demo_callback_page.dart';
 import 'screen/rest_api/demo_api_screen.dart';
 
 void main() {
@@ -35,8 +35,8 @@ class MenuScreen extends StatelessWidget {
               onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const DemoStateScreen())),
-              child: const CustomText("Demo State Screen")),
+                      builder: (context) => const DemoCallBackState())),
+              child: const CustomText("Demo Callback")),
           TextButton(
               onPressed: () => Navigator.push(
                   context,
@@ -51,11 +51,9 @@ class MenuScreen extends StatelessWidget {
                       builder: (context) => const CounterScreen())),
               child: const CustomText("Demo Counter Bloc")),
           TextButton(
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const DemoApiScreen())),
-              child: const CustomText("Demo Rest Api Bloc"))
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const MyApiPage())),
+              child: const CustomText("Demo Rest Api"))
         ])));
   }
 }
